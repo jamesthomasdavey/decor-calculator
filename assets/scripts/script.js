@@ -35,7 +35,7 @@ let decimalToFraction = number => {
   return numerator.toString() + "/" + denominator.toString();
 };
 
-// function split number into integer and decimal, use decimalToFraction on the decimal, and contatenate them.
+// function to split number into integer and decimal, use decimalToFraction on the decimal, and contatenate them.
 let toFraction = num => {
   if (num % 1 === 0) {
     return num.toString();
