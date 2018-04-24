@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400");
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+/*****************************
+********************* GENERAL
+*****************************/
+
+body {
+  background-color: #4d8699;
+  color: #ffffff;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  height: 100%;
+}
+
+.heading {
+  height: 8rem;
+  padding-top: 2.5em;
+  background: #DFAE8B;
+  border-bottom: 4px solid #f1f1ef;
+}
+
+.page-header {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.container {
+  padding-top: 2.7rem;
+}
+
+/*****************************
+************************ FORM
+*****************************/
+
+input,
+select {
+  display: block;
+  width: 70%;
+  max-width: 360px;
+  margin: 1rem auto;
+  height: 2.7rem;
+  padding: 0.5rem;
+  background: transparent;
+  color: #ffffff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 300;
+  border: 0;
+  border-bottom: 2px solid #ffffff;
+  outline: 0;
+  border-radius: 0;
+}
+
+select {
+  -webkit-appearance: none;
+}
+
+::placeholder {
+  color: #ffffff;
+}
+
+form {
+  margin-bottom: 2rem;
+}
+
+#calculate {
+  display: block;
+  margin: 0 auto 1.2rem;
+  padding: 0.7rem;
+  width: 70%;
+  max-width: 360px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+  font-size: .9rem;
+  color: #ffffff;
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+  transition: .3s all ease;
+}
+
+#calculate:hover {
+  background-color: #85b6bd;
+}
+
+#reset {
+  display: block;
+  margin: 0 auto;
+  color: #ffffff;
+  background: transparent;
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+  font-size: .9rem;
+  border: 0;
+  outline: 0;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.result {
+  padding: 3rem 0 4rem;
+}
+
+#result {
+  display: hidden;
+  text-align: center;
+  font-weight: bold;
+}
+
+.show {
+  display: block;
+}
+
+/*****************************
+*********************** MODAL
+*****************************/
+
+.info {
+  display: block;
+  position: fixed;
+  z-index: 9997;
+  bottom: 12px;
+  right: 12px;
+  height: 24px;
+  width: 24px;
+  background-image: url("../images/info.png");
+  background-size: 24px;
+}
+
+.info:hover {
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9998;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.33);
+  animation: 0.2s smoothFade;
+}
+
+.modal__container {
+  display: block;
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  z-index: 9999;
+  margin: 6rem auto 0;
+  padding: 2rem;
+  width: 90%;
+  max-width: 420px;
+  background-color: #4d8699;
+  border-radius: 14px;
+  animation: 0.3s slideDown;
+}
+
+.modal__container p {
+  margin-bottom: 2rem;
+  line-height: 1.5rem;
+}
+
+.modal__close {
+  margin: 0 auto;
+  width: 3rem;
+  height: 1.2rem;
+}
+
+.modal__close p {
+  font-size: 1rem;
+  color: #f1f1ef;
+  text-align: center;
+}
+
+.modal__close:hover {
+  cursor: pointer;
+}
+
+/*****************************
+******************* ANIMATION
+*****************************/
+
+@keyframes slideDown {
+  from {
+    top: -100px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes smoothFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.open {
+  display: block;
+}

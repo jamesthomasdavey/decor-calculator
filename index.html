@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="assets/styles/style.css">
+  <title>Decor Calculator</title>
+</head>
+
+<body>
+  <div class="heading">
+    <h1 class="page-header">Decor Calculator</h1>
+  </div>
+  <div class="container">
+    <form>
+      <input id="wall-width" autofocus type="number" value="" min="0" placeholder="WALL WIDTH">
+      <input id="art-width" type="number" value="" min="0" placeholder="DECOR WIDTH">
+      <select id="units" value="" aria-placeholder="UNITS">
+        <option value="" disabled selected>UNITS</option>
+        <option value="inches">INCHES</option>
+        <option value="centimeters">CENTIMETERS</option>
+      </select>
+      <input id="art-quantity" type="number" value="" min="1" placeholder="DECOR QUANTITY">
+    </form>
+    <button id="calculate" value="Calculate">Calculate</button>
+    <button id="reset" value="Reset">Reset</button>
+    <div class="result">
+      <p id="result"></p>
+    </div>
+    <div class="modal">
+      <div class="modal__container">
+        <p>To use the Decor Calculator, enter the parameters as labeled.</p>
+        <p>Measuring from edge to edge, the results will indicate where to place each hook on the wall, assuming that each item
+          is hung from the middle. This will ensure an even amount of wall space between each item.</p>
+        <div class="modal__close">
+          <p>Close</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="info">
+  </div>
+  <script src="assets/scripts/script.js"></script>
+</body>
+
+</html>
