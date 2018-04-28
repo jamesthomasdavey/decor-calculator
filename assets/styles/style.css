@@ -163,11 +163,12 @@ button:hover {
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.33);
-  animation: 0.2s smoothFade;
+  animation: 0.4s smoothFade;
 }
 
 .modal__container {
   display: block;
+  position: relative;
   z-index: 9999;
   margin: auto;
   padding: 2rem;
